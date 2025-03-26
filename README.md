@@ -45,5 +45,5 @@ After inputting sentences and selecting thier choice of models & views, simply p
 <img src="https://github.com/user-attachments/assets/7e40fbe4-e433-4a62-a524-050983abb7d8" alt="drawing" width="80%"/>
 
 ## Acknowledgements
-This visualization interface generates dependency visualizations with the help of [brat rapid annotation tool](https://brat.nlplab.org/).  
+This visualization interface generates dependency visualizations with the help of the [brat rapid annotation tool](https://brat.nlplab.org/).  
 Portions of the html page (marked in code) and contents of the <b>/static</b> folder were sourced from the introduction page of the [universal dependencies website](https://universaldependencies.org/introduction.html).
