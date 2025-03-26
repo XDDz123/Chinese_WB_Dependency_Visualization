@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- Block Start ################################################################################################################################## -->
+<!-- Block in between the # page divider comments (Block Start <-> Block End) are modified from https://universaldependencies.org/introduction.html -->
+<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>Brat Visualization</title>
+<link href="" rel="root"/> <!-- for JS -->
+<link rel="shortcut icon" href="#">
+<link href="{{url_for('static', filename='css/font-awesome.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{url_for('static', filename='css/jquery-ui-redmond.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{url_for('static', filename='css/style-vis.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{url_for('static', filename='css/hint.css')}}" rel="stylesheet" type="text/css">
+<script src="{{url_for('static', filename='lib/ext/head.load.min.js')}}" type="text/javascript"></script>
+</link></head>
+<body>
+<div class="center" id="main">
+<div id="content">
+<noscript>
+<div id="noscript">
+            It appears that you have Javascript disabled.
+            Please consider enabling Javascript for this page to see the visualizations.
+          </div>
+</noscript>
+<!-- The content may include scripts and styles, hence we must load the shared libraries before the content. -->
+<script type="text/javascript">
+            console.time('loading libraries');
+            var root = ''; // filled in by jekyll
+            head.js(
+                // External libraries
+                // DZ: Copied from embedding.html. I don't know which one is needed for what, so I'm currently keeping them all.
+                root + "{{url_for('static', filename='lib/ext/jquery.min.js')}}",
+                root + "{{url_for('static', filename='lib/ext/jquery.svg.min.js')}}",
+                root + "{{url_for('static', filename='lib/ext/jquery.svgdom.min.js')}}",
+                root + "{{url_for('static', filename='lib/ext/jquery.timeago.js')}}",
+                root + "{{url_for('static', filename='lib/ext/jquery-ui.min.js')}}",
+                root + "{{url_for('static', filename='lib/ext/waypoints.min.js')}}",
+                root + "{{url_for('static', filename='lib/ext/jquery.address.min.js')}}",
+            );
+        </script>
+<!-- Block End ################################################################################################################################## -->
+
+<div id="footer">
+</div>
+
+<div class="form_parent">
+<form method="POST" action="/">
+    <label for="textInput" style="font-size: 15px;">Generate Brat Visualisations</label>
+    <textarea required type="text" id="textInput" name="textInput" placeholder="Type sentences here..." maxlength="2000">{{query}}</textarea>
+    <label>Select Models: </label>
+    <span class="options_container", id="options_parent">
+        <label>LTP</label>
+        <input type="checkbox" name="checkbox" value="LTP" {{"checked" if 'LTP' in selected_models}}>
+    </span>
+    <span class="options_container">
+        <label>Penn</label>
+        <input type="checkbox" name="checkbox" value="Penn" {{"checked" if 'Penn' in selected_models}}>
+    </span>
+    <span class="options_container">
+        <label>PKU</label>
+        <input type="checkbox" name="checkbox" value="PKU" {{"checked" if 'PKU' in selected_models}}>
+    </span>
+    <span class="options_container">
+        <label>GSD</label>
+        <input type="checkbox" name="checkbox" value="GSD" {{"checked" if 'GSD' in selected_models}}>
+    </span>
+    <span class="options_container">
+        <label>spaCy</label>
+        <input type="checkbox" name="checkbox" value="spaCy" {{"checked" if 'spaCy' in selected_models}}>
+    </span>
+
+    <span class="options_container">
+        <label>View By: </label>
+        <select name="viewby" id="viewby">
+            <option value="sentence" {{"selected" if 'sentence' in selected_view}}>Sentence</option>
+            <option value="model" {{"selected" if 'model' in selected_view}}>Model</option>
+        </select>
+    </span>
+
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<style>
+    .form_parent {
+        margin-bottom: 20px;
+    }
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    input {
+        margin-right: 15px;
+        vertical-align: middle;
+    }
+    select {
+        margin-right: 15px;
+        vertical-align: bottom;
+        background-color: transparent;
+        border: solid;
+        border-color: slategrey;
+        border-radius: 3px;
+        border-width: 1px;
+        font-size: 14px;
+    }
+    .options_container {
+        padding-bottom: 4px;
+        border-right: 1px solid slategrey;
+        margin-right: 10px;
+    }
+    textarea {
+        resize: vertical;
+        width: 99.5%;
+        height: 50px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        max-height: 30vh;
+        max-lines: 5;
+        font-size: 14px;
+    }
+    button[type=submit] {
+        margin-left: 6px;
+        background-color: transparent;
+        border: solid;
+        border-color: slategrey;
+        border-radius: 3px;
+        border-width: 1px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 14px;
+        vertical-align: bottom;
+    }
+    hr {
+        border: none;
+        border-top: 1px dotted slategrey;
+    }
+    .page_divider {
+        border: none;
+        border-top: 1px solid slategrey;
+    }
+
+</style>
+
+<div id="add-sen">
+{{content | safe}}
+</div>
+
+<!-- Block Start ################################################################################################################################## -->
+<!-- Block in between the # page divider comments (Block Start <-> Block End) are modified from https://universaldependencies.org/introduction.html -->
+<!-- support for embedded visualizations -->
+<script type="text/javascript">
+    var root = ''; 
+    head.js(
+        // brat helper modules
+        root + "{{url_for('static', filename='lib/brat/configuration.js')}}",
+        root + "{{url_for('static', filename='lib/brat/util.js')}}",
+        root + "{{url_for('static', filename='lib/brat/annotation_log.js')}}",
+        root + "{{url_for('static', filename='lib/ext/webfont.js')}}",
+        // brat modules
+        root + "{{url_for('static', filename='lib/brat/dispatcher.js')}}",
+        root + "{{url_for('static', filename='lib/brat/url_monitor.js')}}",
+        root + "{{url_for('static', filename='lib/brat/visualizer.js')}}",
+
+        // embedding configuration
+        root + "{{url_for('static', filename='lib/local/config.js')}}",
+        // project-specific collection data
+        root + "{{url_for('static', filename='lib/local/collections.js')}}",
+
+        // Annodoc
+        root + "{{url_for('static', filename='lib/annodoc/annodoc.js')}}",
+
+        // NOTE: non-local libraries
+        root + "{{url_for('static', filename='lib/conllu/conllu.js')}}"
+    );
+
+    var webFontURLs = [
+        root + "{{url_for('static', filename='static/fonts/PT_Sans-Caption-Web-Regular.ttf')}}",
+        root + "{{url_for('static', filename='static/fonts/Liberation_Sans-Regular.ttf')}}",
+    ];
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
+    };
+
+    head.ready(function() {
+        setupTimeago();
+
+        // mark current collection (filled in by Jekyll)
+        Collections.listing['_current'] = '';
+
+	// perform all embedding and support functions
+	Annodoc.activate(Config.bratCollData, Collections.listing);
+    });
+</script>
+<!-- Block End ################################################################################################################################## -->
+
+<div id="footer">
+</div>
+</div>
+</body>
+</html>
