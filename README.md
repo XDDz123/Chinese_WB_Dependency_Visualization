@@ -36,8 +36,8 @@ Install the following:
 ### Description 
 The visualization interface consists of the following components:
 - Text Box: where users can type in their sentences.
-- Model Selection Checkboxes: "Check" the corresponding checkbox to generate dependency visualizations with the selected model.
-- View By Selection Menu: The UI provides two different views, one grouped by sentences, the other models.
+- Model Selection Checkboxes: "check" the corresponding checkbox to generate dependency visualizations with the selected model.
+- View By Selection Menu: the UI provides two different views, one grouped by sentences, the other models.
   
 After inputting sentences and selecting thier choice of models & views, simply press the submit button to generate the visualizations.
 ### UI Sample
