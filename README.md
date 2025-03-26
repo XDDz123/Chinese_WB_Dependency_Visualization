@@ -10,24 +10,25 @@ Install the following:
 
 ## Instructions
 1. Download trained models from [LINK HERE TBD](). 
-2. Extract the model zip file, the place all contents <em>as is</em> within the <b>model</b> directory. Your directory should resemble the following:
-  ```
-  project
-  │   ...    
-  │
-  └───models
-  │   └───UD_Chinese-GSDSimp
-  │   │   └───UD_Chinese-GSDSimp
-  │   │   └───UD_Chinese-GSDSimp_model
-  │   │   │   └───saved_models
-  │   │   │   │   └───depparse
-  │   │   │   │   │   zh-hans_gsdsimp_electra-large_parser.pt
-  │   │   │   │   └───pos
-  │   │   │   │   └───lemma
-  │   │   │   │   └───tokenize
-  │   └───UD_Chinese-GSDPKU
-  │   ...
-  ```
+2. Create a folder named <b>models</b>. Extract the downloaded trained models zip file, then place all contents <em>as is</em> within the <b>models</b> directory.
+   Your directory should resemble the following:
+      ```
+      project
+      │   ...    
+      │
+      └───models
+      │   └───UD_Chinese-GSDSimp
+      │   │   └───UD_Chinese-GSDSimp
+      │   │   └───UD_Chinese-GSDSimp_model
+      │   │   │   └───saved_models
+      │   │   │   │   └───depparse
+      │   │   │   │   │   zh-hans_gsdsimp_electra-large_parser.pt
+      │   │   │   │   └───pos
+      │   │   │   │   └───lemma
+      │   │   │   │   └───tokenize
+      │   └───UD_Chinese-GSDPKU
+      │   ...
+      ```
 3.     python backend.py
       Run the python file to start the flask server. Initial loading times should be expected to be slow due to stanza downloading resources.
       For optimal performance, CUDA is recommended.
