@@ -9,7 +9,7 @@ Install the following:
 - [Stanza](https://stanfordnlp.github.io/stanza/)
 
 ## Instructions
-1. Download trained models available from [LINK HERE TBD](https://zenodo.org/records/15096936) (see a `models` folder). 
+1. Download trained models available from [zenodo.org](https://zenodo.org/records/15096936) (see a `models` folder). 
 2. Create a folder named <b>models</b>. Extract the downloaded trained models zip file, then place all contents <em>as is</em> within the <b>models</b> directory.
    Your directory should resemble the following:
       ```
