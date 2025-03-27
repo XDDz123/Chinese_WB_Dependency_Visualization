@@ -152,41 +152,41 @@ if __name__ == '__main__':
     nlp_LTP = stanza.Pipeline(
         lang="zh-hans",
         download_method=DownloadMethod.REUSE_RESOURCES,
-        depparse_model_path="models/UD_Chinese-GSDLTP/UD_Chinese-GSDSimp_model/saved_models/depparse/zh-hans_gsdsimp_electra-large_parser.pt",
-        pos_model_path="models/UD_Chinese-GSDLTP/UD_Chinese-GSDSimp_model/saved_models/pos/zh-hans_gsdsimp_charlm_tagger.pt",
-        tokenize_model_path="models/UD_Chinese-GSDLTP/UD_Chinese-GSDSimp_model/saved_models/tokenize/zh-hans_gsdsimp_tokenizer.pt",
+        depparse_model_path="models/UD_Chinese-GSDLTP/UD_Chinese-GSDSimp_model-bert/saved_models/depparse/zh-hans_gsdsimp_electra-large_parser.pt",
+        pos_model_path="models/UD_Chinese-GSDLTP/UD_Chinese-GSDSimp_model-bert/saved_models/pos/zh-hans_gsdsimp_charlm_tagger.pt",
+        tokenize_model_path="models/UD_Chinese-GSDLTP/UD_Chinese-GSDSimp_model-bert/saved_models/tokenize/zh-hans_gsdsimp_tokenizer.pt",
         processors='tokenize,pos,lemma,depparse', )
 
     nlp_Penn = stanza.Pipeline(
         lang="zh-hans",
         download_method=DownloadMethod.REUSE_RESOURCES,
-        depparse_model_path="models/UD_Chinese-GSDPenn/UD_Chinese-GSDSimp_model/saved_models/depparse/zh-hans_gsdsimp_electra-large_parser.pt",
-        pos_model_path="models/UD_Chinese-GSDPenn/UD_Chinese-GSDSimp_model/saved_models/pos/zh-hans_gsdsimp_charlm_tagger.pt",
-        tokenize_model_path="models/UD_Chinese-GSDPenn/UD_Chinese-GSDSimp_model/saved_models/tokenize/zh-hans_gsdsimp_tokenizer.pt",
+        depparse_model_path="models/UD_Chinese-GSDPenn/UD_Chinese-GSDSimp_model-bert/saved_models/depparse/zh-hans_gsdsimp_electra-large_parser.pt",
+        pos_model_path="models/UD_Chinese-GSDPenn/UD_Chinese-GSDSimp_model-bert/saved_models/pos/zh-hans_gsdsimp_charlm_tagger.pt",
+        tokenize_model_path="models/UD_Chinese-GSDPenn/UD_Chinese-GSDSimp_model-bert/saved_models/tokenize/zh-hans_gsdsimp_tokenizer.pt",
         processors='tokenize,pos,lemma,depparse', )
 
     nlp_PKU = stanza.Pipeline(
         lang="zh-hans",
         download_method=DownloadMethod.REUSE_RESOURCES,
-        depparse_model_path="models/UD_Chinese-GSDPKU/UD_Chinese-GSDSimp_model-charlm/saved_models/depparse/zh-hans_gsdsimp_charlm_parser.pt",
-        pos_model_path="models/UD_Chinese-GSDPKU/UD_Chinese-GSDSimp_model-charlm/saved_models/pos/zh-hans_gsdsimp_charlm_tagger.pt",
-        tokenize_model_path="models/UD_Chinese-GSDPKU/UD_Chinese-GSDSimp_model-charlm/saved_models/tokenize/zh-hans_gsdsimp_tokenizer.pt",
+        depparse_model_path="models/UD_Chinese-GSDPKU/UD_Chinese-GSDSimp_model-bert/saved_models/depparse/zh-hans_gsdsimp_electra-large_parser.pt",
+        pos_model_path="models/UD_Chinese-GSDPKU/UD_Chinese-GSDSimp_model-bert/saved_models/pos/zh-hans_gsdsimp_charlm_tagger.pt",
+        tokenize_model_path="models/UD_Chinese-GSDPKU/UD_Chinese-GSDSimp_model-bert/saved_models/tokenize/zh-hans_gsdsimp_tokenizer.pt",
         processors='tokenize,pos,lemma,depparse', )
 
     nlp_GSD = stanza.Pipeline(
         lang="zh-hans",
         download_method=DownloadMethod.REUSE_RESOURCES,
-        depparse_model_path="models/UD_Chinese-GSDSimp/UD_Chinese-GSDSimp_model/saved_models/depparse/zh-hans_gsdsimp_electra-large_parser.pt",
-        pos_model_path="models/UD_Chinese-GSDSimp/UD_Chinese-GSDSimp_model/saved_models/pos/zh-hans_gsdsimp_charlm_tagger.pt",
-        tokenize_model_path="models/UD_Chinese-GSDSimp/UD_Chinese-GSDSimp_model/saved_models/tokenize/zh-hans_gsdsimp_tokenizer.pt",
+        depparse_model_path="models/UD_Chinese-GSDSimp/UD_Chinese-GSDSimp_model-bert/saved_models/depparse/zh-hans_gsdsimp_electra-large_parser.pt",
+        pos_model_path="models/UD_Chinese-GSDSimp/UD_Chinese-GSDSimp_model-bert/saved_models/pos/zh-hans_gsdsimp_charlm_tagger.pt",
+        tokenize_model_path="models/UD_Chinese-GSDSimp/UD_Chinese-GSDSimp_model-bert/saved_models/tokenize/zh-hans_gsdsimp_tokenizer.pt",
         processors='tokenize,pos,lemma,depparse', )
 
     nlp_spaCy = stanza.Pipeline(
         lang="zh-hans",
         download_method=DownloadMethod.REUSE_RESOURCES,
-        depparse_model_path="models/UD_Chinese-GSDspaCy/UD_Chinese-GSDSimp_model-charlm/saved_models/depparse/zh-hans_gsdsimp_charlm_parser.pt",
-        pos_model_path="models/UD_Chinese-GSDspaCy/UD_Chinese-GSDSimp_model-charlm/saved_models/pos/zh-hans_gsdsimp_charlm_tagger.pt",
-        tokenize_model_path="models/UD_Chinese-GSDspaCy/UD_Chinese-GSDSimp_model-charlm/saved_models/tokenize/zh-hans_gsdsimp_tokenizer.pt",
+        depparse_model_path="models/UD_Chinese-GSDspaCy/UD_Chinese-GSDSimp_model-bert/saved_models/depparse/zh-hans_gsdsimp_electra-large_parser.pt",
+        pos_model_path="models/UD_Chinese-GSDspaCy/UD_Chinese-GSDSimp_model-bert/saved_models/pos/zh-hans_gsdsimp_charlm_tagger.pt",
+        tokenize_model_path="models/UD_Chinese-GSDspaCy/UD_Chinese-GSDSimp_model-bert/saved_models/tokenize/zh-hans_gsdsimp_tokenizer.pt",
         processors='tokenize,pos,lemma,depparse', )
 
     app.run(debug=False)
