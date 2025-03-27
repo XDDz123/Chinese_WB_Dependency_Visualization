@@ -18,8 +18,7 @@ Install the following:
       │
       └───models
       │   └───UD_Chinese-GSDSimp
-      │   │   └───UD_Chinese-GSDSimp
-      │   │   └───UD_Chinese-GSDSimp_model
+      │   │   └───UD_Chinese-GSDSimp_model-bert
       │   │   │   └───saved_models
       │   │   │   │   └───depparse
       │   │   │   │   │   zh-hans_gsdsimp_electra-large_parser.pt
