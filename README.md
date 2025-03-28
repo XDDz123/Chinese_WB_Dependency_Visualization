@@ -8,6 +8,17 @@ Install the following:
 - [Flask](https://flask.palletsprojects.com/en/stable/installation/)
 - [Stanza](https://stanfordnlp.github.io/stanza/)
 
+Alternatively, install via pip:
+- CPU Version of Pytorch
+    ```
+    python -m pip install -r requirements_cpu.txt
+    ```
+
+- GPU Version of Pytorch
+    ```
+    python -m pip install -r requirements_gpu_cu124.txt
+    ```
+
 ## Instructions
 1. The trained models are available for download from [Zenodo](https://zenodo.org/records/15096936) (see the `models` folder for details).
 2. Create a folder named <b>models</b>. Extract the downloaded trained models zip file, then place all contents <em>as is</em> within the <b>models</b> directory.
