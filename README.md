@@ -1,5 +1,5 @@
 # Chinese WB Dependency Visualization
-This repository hosts code for the visualization interface that accompanies the paper: <b>Exploring Chinese Dependency Parsing Across Word Segmentation Strategies</b> by Yige Chen*, Zelong Li*, Changbing Yang*, Cindy Zhang*, Amandisa Cady,
+This repository hosts code for the visualization interface that accompanies the paper: **Parsing Through Boundaries in Chinese Word Segmentation** by Yige Chen*, Zelong Li*, Changbing Yang*, Cindy Zhang*, Amandisa Cady,
 Ai Ka Lee, Zejiao Zeng, and Jungyeul Park (*Equally contributed authors). Submitted to *ACL2025 System Demonstrations*.
 
 ## Program requirements
