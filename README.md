@@ -61,5 +61,5 @@ This visualization interface generates dependency visualizations with the help o
 ## Data Availability Statement
 A live demonstration of the visualization interface is available at [HERE](http://47.80.13.29/).  
 The full dataset can be accessed via [Zenodo](https://doi.org/10.5281/zenodo.15287129).  
-All derived resources are released under the \textbf{Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)} license, consistent with the licensing of the original Universal Dependencies Chinese treebank.  
+All derived resources are released under the **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)** license, consistent with the licensing of the original Universal Dependencies Chinese treebank.  
 
