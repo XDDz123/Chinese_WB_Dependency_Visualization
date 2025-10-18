@@ -2,6 +2,11 @@
 
 This repository hosts code for the visualization interface that accompanies the paper: **Parsing Through Boundaries in Chinese Word Segmentation** by Yige Chen*, Zelong Li*, Haihua Pan, and Jungyeul Park (*Equally contributed authors). Submitted to *LRE* (Springer Nature).
 
+## Data Availability Statement
+A live demonstration of the visualization interface is available at [HERE](http://47.80.13.29/).  
+The full dataset can be accessed via [Zenodo](https://doi.org/10.5281/zenodo.15287129).  
+All derived resources are released under the **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)** license, consistent with the licensing of the original Universal Dependencies Chinese treebank.
+
 ## Program requirements
 Install the following:
 - [Python](https://www.python.org/) (latest version recommend)
@@ -56,10 +61,3 @@ After inputting sentences and selecting thier choice of models & views, simply p
 
 ## Acknowledgements
 This visualization interface generates dependency visualizations with the help of the [brat rapid annotation tool](https://brat.nlplab.org/). Portions of the html page (marked in code) and contents of the <b>/static</b> folder were sourced from the introduction page of the [universal dependencies website](https://universaldependencies.org/introduction.html).
-
-
-## Data Availability Statement
-A live demonstration of the visualization interface is available at [HERE](http://47.80.13.29/).  
-The full dataset can be accessed via [Zenodo](https://doi.org/10.5281/zenodo.15287129).  
-All derived resources are released under the **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)** license, consistent with the licensing of the original Universal Dependencies Chinese treebank.  
-
